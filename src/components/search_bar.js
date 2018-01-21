@@ -10,9 +10,15 @@ export default class Search extends Component {
   }
   render() {
     return (
-      <div>
-        <label htmlFor="searchText">Search: </label>
-        <input type="text" name="searchText" onChange={(event) => this.setState({term: event.target.value})}/>
+      <div className="search-section">
+          <div className="search-bar-wrapper">
+            <label htmlFor="searchText">
+              <span className="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </label>
+            <input type="text" name="searchText"
+            className="search-bar"
+            onChange={(event) => this.setState({term: event.target.value})} />
+          </div>
       </div>
     );
   }
