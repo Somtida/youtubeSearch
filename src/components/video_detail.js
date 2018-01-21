@@ -15,7 +15,8 @@ export default class VideoDetail extends Component {
         </div>
         <div className="video-detail">
           <h2>{this.props.video.snippet.title}</h2>
-          <p>{this.props.video.snippet.description}</p>
+          <em>Channel Title: {this.props.video.snippet.channelTitle}</em>
+          <p>Description: {this.props.video.snippet.description}</p>
         </div>
 
       </div>

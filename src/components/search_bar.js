@@ -8,6 +8,10 @@ export default class Search extends Component {
       term : "",
     }
   }
+  onTermChange(term) {
+    this.setState({term})
+    this.props.onSearchTerm(term);
+  }
   render() {
     return (
       <div className="search-section">
@@ -17,7 +21,7 @@ export default class Search extends Component {
             </label>
             <input type="text" name="searchText"
             className="search-bar"
-            onChange={(event) => this.setState({term: event.target.value})} />
+            onChange={(event) => this.onTermChange(event.target.value)} />
           </div>
       </div>
     );
